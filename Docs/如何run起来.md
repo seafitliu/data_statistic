@@ -9,7 +9,7 @@
 (4) RPC服务框架   腾讯开源TARS的RPC系统，有了这个，再大的流量也能轻松HOLD住，开发简单。
 (5) MYSQL   待可视化数据存储容器，这个天下人皆知
   
-**二，详细步骤**
+**二，详细步骤**  
  **(1) 数据**   
  数据库安装好后，建表 [建表语句](https://github.com/seafitliu/data_statistic/blob/master/Docs/data_stat.sql)  我灌了一部分数据，作为例子  
          表字段    
@@ -27,7 +27,7 @@
   
  **(3) 数据可视化WEB**   
      最为主要的是数据的填充
-         '''javascript
+        `javascript
 	 var obj = JSON.parse(data);
 				barChartData.labels.splice(0,barChartData.labels.length);
 				barChartData.datasets.splice(0,barChartData.datasets.length);
@@ -56,4 +56,4 @@
 					barChartData.datasets.push(newDataset);
 					haslabel = true;
 				}>
-'''
+`
