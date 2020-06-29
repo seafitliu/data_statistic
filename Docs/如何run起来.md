@@ -28,7 +28,7 @@
  **(3) 数据可视化WEB**   
      最为主要的是数据的填充
      
-```javascript
+```
 	 var obj = JSON.parse(data);  
 				barChartData.labels.splice(0,barChartData.labels.length);  
 				barChartData.datasets.splice(0,barChartData.datasets.length);  
@@ -58,7 +58,4 @@
 					haslabel = true;  
 				}
 ```
- ```python
-    #!/usr/bin/env python3
-    print("Hello, World!");
-    ```
+
