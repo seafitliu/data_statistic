@@ -20,8 +20,8 @@
  
  (2) HTTP服务  
       这一步，可以完全用其他方案替换，不过为了将来大流量支撑，建议从一开始就找一个HOLD满全场的框架，这样就不用频繁的对服务进行改造了。
-      1，TARS安装  详见<https://github.com/TarsCloud/Tars>  具体就不多说了
-      2，编译和安装DST.StatisticServer    代码见[StatServer]<https://github.com/seafitliu/data_statistic/tree/master/StatServer>目录 TARS框架安装后之后，直接在目录make， 然后会生成StatisticServer.tgz，直接发布到TARS框架里即可，注意这个是HTTP服务，务必按照TARS框架的规范来，对于完全不了解TARS服务的人来说，可能会有一些障碍，不过把TARS学习到位了，也会很容易。有问题可以微信我。
+      1，TARS安装  详见[TARS](https://github.com/TarsCloud/Tars)  具体就不多说了
+      2，编译和安装DST.StatisticServer    代码见[StatServer](https://github.com/seafitliu/data_statistic/tree/master/StatServer)目录 TARS框架安装后之后，直接在目录make， 然后会生成StatisticServer.tgz，直接发布到TARS框架里即可，注意这个是HTTP服务，务必按照TARS框架的规范来，对于完全不了解TARS服务的人来说，可能会有一些障碍，不过把TARS学习到位了，也会很容易。有问题可以微信我。
       3，数据JSON化     将从数据库拿到的axis_x，axis_y， dataset_name填到JSON串里  root[data[i]["dataset_name"]][data[i]["axis_x"]] = data[i]["axis_y"]; 
 
  (3) 数据可视化WEB  
