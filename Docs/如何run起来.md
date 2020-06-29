@@ -26,7 +26,8 @@
   
  (3) 数据可视化WEB  
      最为主要的是数据的填充
-         <var obj = JSON.parse(data);
+         ```
+	 var obj = JSON.parse(data);
 				barChartData.labels.splice(0,barChartData.labels.length);
 				barChartData.datasets.splice(0,barChartData.datasets.length);
 				var colorNames = Object.keys(window.chartColors);
@@ -54,3 +55,4 @@
 					barChartData.datasets.push(newDataset);
 					haslabel = true;
 				}>
+```
