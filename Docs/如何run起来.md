@@ -29,33 +29,33 @@
      最为主要的是数据的填充
      
 ```
-	 var obj = JSON.parse(data);  
-				barChartData.labels.splice(0,barChartData.labels.length);  
-				barChartData.datasets.splice(0,barChartData.datasets.length);  
-				var colorNames = Object.keys(window.chartColors);  
-				var haslabel = false;  
-				var counts = 0;  
-				for(var itemkey in obj){  
-					counts=counts+1;  
-					var colorName = colorNames[counts % colorNames.length];  
-			        var dsColor = window.chartColors[colorName];  
-					var newDataset = {  
-						label: itemkey,  
-						backgroundColor: color(dsColor).alpha(0.5).rgbString(),  
-						borderColor: dsColor,  
-						borderWidth: 1,  
-						data: [],  
-						fill: false  
-					};  
-					var itemobj = obj[itemkey];  
-					for(var key in itemobj){  
-						if(!haslabel) {  
-							barChartData.labels.push(key);  
-						}
-						newDataset.data.push(parseInt(itemobj[key]));  
-					}  
-					barChartData.datasets.push(newDataset);  
-					haslabel = true;  
-				}
+	var obj = JSON.parse(data);  
+	barChartData.labels.splice(0,barChartData.labels.length);  
+	barChartData.datasets.splice(0,barChartData.datasets.length);  
+	var colorNames = Object.keys(window.chartColors);  
+	var haslabel = false;  
+	var counts = 0;  
+	for(var itemkey in obj){  
+		counts=counts+1;  
+		var colorName = colorNames[counts % colorNames.length];  
+		var dsColor = window.chartColors[colorName];  
+		var newDataset = {  
+			label: itemkey,  
+			backgroundColor: color(dsColor).alpha(0.5).rgbString(),  
+			borderColor: dsColor,  
+			borderWidth: 1,  
+			data: [],  
+			fill: false  
+		};  
+		var itemobj = obj[itemkey];  
+		for(var key in itemobj){  
+			if(!haslabel) {  
+				barChartData.labels.push(key);  
+			}
+			newDataset.data.push(parseInt(itemobj[key]));  
+		}  
+		barChartData.datasets.push(newDataset);  
+		haslabel = true;  
+	}
 ```
 
